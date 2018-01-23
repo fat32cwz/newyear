@@ -1,0 +1,130 @@
+@keyframes move1{
+	0%{
+		left: -15px;
+		top: -20px;
+		width: 34px;
+		height: 34px;
+	}
+	25%{
+		left: -26px;
+		top: -25px;
+		width: 36px;
+		height:36px;
+	}
+	50%{
+		left: -35px;
+		top: -30px;
+		width: 38px;
+		height: 38px;
+	}
+	75%{
+		left: -44px;
+		top: -35px;
+		width: 40px;
+		height: 40px;
+	}
+	100%{
+		left: -50px;
+		top: -40px;
+		width: 42px;
+		height: 42px;
+	}
+
+}
+
+@keyframes move2{
+	0%{
+		right: -15px;
+		top: -20px;
+		width: 34px;
+		height: 34px;
+	}
+	100%{
+		right: -30px;
+		top: -40px;
+	}
+
+}
+
+@keyframes move3{
+	0%{
+		left: -15px;
+		bottom: -20px;
+		width: 34px;
+		height: 34px;
+	}
+	100%{
+		left: -25px;
+		bottom: -38px;
+	}
+
+}
+
+@keyframes move4{
+	0%{
+		right: -15px;
+		bottom: -20px;
+		width: 34px;
+		height: 34px;
+	}
+	100%{
+		right: -40px;
+		bottom: -45px;
+		width: 40px;
+		height: 40px;
+	}
+
+}
+
+@keyframes move5{
+	0%{
+		right: -30px;
+		top: 10px;
+		width: 34px;
+		height: 34px;
+	}
+	100%{
+		right: -60px;
+		top: 10px;
+		width: 38px;
+		height: 38px;
+	}
+
+}
+
+@keyframes move6{
+	0%{
+		left: -15px;
+		top: -20px;
+		width: 34px;
+		height: 34px;
+	}
+	100%{
+		left: -30px;
+		top: -40px;
+	}
+
+}
+
+@keyframes labelIn{
+	0%{
+		transform: scale(1,1) rotateY(0deg);
+		-webkit-transform: scale(1,1) rotateY(0deg);	/* Safari 和 Chrome */
+		-moz-transform: scale(1,1) rotateY(0deg);	/* Firefox */
+	}
+	20%{
+		transform: scale(0.5,0.5) rotateY(0deg);
+		-webkit-transform: scale(0.5,0.5) rotateY(0deg);	/* Safari 和 Chrome */
+		-moz-transform: scale(0.5,0.5) rotateY(0deg);	/* Firefox */
+	}
+	40%{
+		transform: scale(0.5,0.5) rotateY(360deg);
+		-webkit-transform: scale(0.5,0.5) rotateY(360deg);	 /* Safari 和 Chrome */
+		-moz-transform: scale(0.5,0.5) rotateY(360deg);	     /* Firefox */
+	}
+	100%{
+		transform: scale(1,1);
+		-webkit-transform: scale(1,1);	     /* Safari 和 Chrome */
+		-moz-transform: scale(1,1);      	 /* Firefox */
+	}
+}

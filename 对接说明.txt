@@ -1,0 +1,7 @@
+世裕3D需要绑定的事件：
+ enter  ： 镜头进入3D场景
+ backToStart： 镜头回到一开始俯视
+
+你要trigger我的事件：
+
+ labelOpen ： 让签文出现事件

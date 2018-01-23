@@ -1,0 +1,158 @@
+@font-face{
+	font-family: zzgf;
+	src:url(../font/zzgf.otf);
+}
+
+#footer{
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	bottom: 3rem;
+}
+
+.notice{
+	letter-spacing: 3px;
+	padding: 15px 10px;
+	color: #010101;
+	font-family: zzgf;
+	font-size: 1.2rem;
+	width: 90%;
+	text-align: center;
+	background-image: url(../images/bg-b.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin: auto;
+}
+
+#notice1,#notice2,#notice3,#start{
+	display: none;
+}
+
+#start{
+	background-image: url(../images/bg-r.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	color: #010101;
+	font-family: zzgf;
+	font-size: 1.2rem;
+	letter-spacing: 3px;
+	text-align: center;
+	width: 9rem;
+	height: 4.3rem;
+	border: 0;
+	box-shadow: none;
+	background-color: rgba(255,255,255,0);
+	outline: none;
+}
+
+
+#flower-container{
+	display: none;
+	margin: auto;
+	position: relative;
+	width: 3rem;
+	height: 3rem;
+	bottom: 3rem;
+}
+
+#f1{
+	position: absolute;
+	left: -15px;
+	top: -20px;
+}
+
+#f2{
+	position: absolute;
+	right: -15px;
+	top: -20px;
+}
+
+#f3{
+	position: absolute;
+	left: -15px;
+	bottom: -20px;
+}
+
+#f4{
+	position: absolute;
+	right: -15px;
+	bottom: -20px;
+}
+
+#f5{
+	position: absolute;
+	right: -30px;
+	width: 28px;
+	height: 28px;
+	top: 10px;
+}
+
+#f6{
+	position: absolute;
+	left: -30px;
+	width: 28px;
+	height: 28px;
+	top: 10px;
+}
+
+
+#cloud1{
+	position: fixed;
+	left: -100px;
+	top: 0;
+	height: 100%;
+	display: none;
+	z-index: -99;
+}
+
+#cloud2{
+	position: fixed;
+	right: -100px;
+	top: 0;
+	height: 100%;
+	display: none;
+	z-index: -99;
+}
+
+#l1{
+	position: fixed;
+	top: 0;
+	height: 100%;
+}
+
+#l2{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	height: 100%;
+}
+
+#l3{
+	position: fixed;
+	bottom: 0;
+	height: 100%;
+}
+
+#l1,#l2,#l3{
+	left: -30px;
+}
+
+#label-container{
+	position: relative;
+	z-index: 0;
+}
+
+#label{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 85%;
+	margin: auto;
+	display: none;
+	z-index: 999;
+}
+
