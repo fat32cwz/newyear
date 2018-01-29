@@ -3,36 +3,70 @@ $(document).ready(function(){
 
 	tips();               //提示字幕的交替变化
 
+	scollText();		  //生成随机签
+
 	start();              //“开始探索”按钮事件
+
+	musicControl();       //背景音乐控制按钮
+
+	photo();              //拍照截图功能
+
+	share();              //分享遮罩提示
 
 });
 
 
 function eventBind() {              //绑定流程事件
 	$('body').bind('labelOpen',function () {      //让卷轴出现
-		$('#cloud1').css('display','block');
-		$('#cloud1').animate({left:'-30px'},"slow");
+		// $('#cloud1').css('display','block');
+		// $('#cloud1').animate({left:'-30px'},"slow");
+		// setTimeout(function () {
+		// 	$('#cloud2').css('display','block');
+		// 	$('#cloud2').animate({right:'-30px'},"slow");
+		// 	setTimeout(function () {
+		// 		$('#label').css({
+		// 			'display':'block',
+		// 			'animation':'labelIn 2s linear',
+		// 			'-moz-animation':'labelIn 2s linear',
+		// 			'-webkit-animation':'labelIn 2s linear',
+		// 			'-o-animation':'labelIn 2s linear'/*,
+		// 			'animation-fill-mode':'forwards'*/
+		// 		});
+		// 	},1000);
+		// },1500);
+		$('#l3').animate({left:'-30px'},'slow');
+		$('#r3').animate({right:'-30px'},'slow');
 		setTimeout(function () {
-			$('#cloud2').css('display','block');
-			$('#cloud2').animate({right:'-30px'},"slow");
+			$('#l2').animate({left:'-30px'},'slow');
+			$('#r2').animate({right:'-30px'},'slow');
 			setTimeout(function () {
-				$('#label').css({
-					'display':'block',
-					'animation':'labelIn 2s linear',
-					'-moz-animation':'labelIn 2s linear',
-					'-webkit-animation':'labelIn 2s linear',
-					'-o-animation':'labelIn 2s linear'/*,
-					'animation-fill-mode':'forwards'*/
-				});
-			},1000);
-		},1500);
-
+				$('#l1').animate({left:'-30px'},'slow');
+				$('#r1').animate({right:'-30px'},'slow');
+				setTimeout(function () {
+					$('#bg').css({
+						'filter':'blur(10px)',
+						'webkit-filter':'blur(10px)'
+					});
+					$('#label').fadeIn('fast');
+					$('#label').css({
+						/*'display':'block',*/
+						'animation':'labelIn 1.8s linear',
+						'-webkit-animation':'labelIn 1.8s linear'/*,
+						'animation-fill-mode':'forwards'*/
+					});
+					setTimeout(function () {
+						$('#photo-container').fadeIn('fast');
+						$('#share').fadeIn('fast');
+					},2500);
+				},500);
+			},250);
+		},250);
 		$('body').trigger('findFinish');          //触发分享内容改变事件
 		// setTimeout(function () {
 		// 	$('#label-container').fadeOut(2000,function () {
 		// 		$('body').trigger("backToStart");     //镜头回到一开始进入场景时的的远景俯视角度
-		// 		$('#share1').css('display','block');
-		// 		$('#share2').css('display','block');
+		// 		$('#photo').css('display','block');
+		// 		$('#share').css('display','block');
 		// 	});
 		// },3000);
 	});
@@ -108,21 +142,47 @@ function start() {                   //“开始探索”按钮事件
 
 
 function scollText() {					//生成随机祝福语
-	var text = new Array("1","2","3","4","5","6","7","8","9","10");
-	var index = parseInt(Math.random()*10);
-	var result = text[index];
-	$('#scoll').text(result);
+	var index = parseInt(Math.random()*3)+1;
+	var result = 'images/label-'+ index +'.png';
+	$('#label').attr('src',result);
 	return result;
 }
 
 function musicControl() {				//背景音乐控制
-	// body...
+	var audio = document.getElementById("bgm");
+	audio.volume = 0.85;
+	$('#bgm-control').click(function () {
+		if ($('#bgm-control').attr('src')=='images/bgm-on.png') {
+			$('#bgm-control').attr('src','images/bgm-off.png');
+			audio.pause();
+		}else{
+			$('#bgm-control').attr('src','images/bgm-on.png');
+			audio.play();
+		}
+	});
 }
 
-function share1() {						//拍照分享
-	// body...
+function photo() {						//拍照分享
+	$('#photo').click(function () {
+		//截屏动画效果？？？？
+		html2canvas($('body'),{
+			onrendered: function (canvas) {
+				$('#card').prepend(canvas);
+				$('#screenshot-container').css('display','block');
+			}
+		});
+	});
 }
 
-function share2() {                   	//普通分享
-	// body...
+function share() {                   	//普通分享
+	$('#share').click(function () {
+		$('#cover').css('display','block');
+		setTimeout(function () {
+			$('#cover').css('display','none');
+		},3000)
+	});
+
+	$('#cover').click(function () {
+		$(this).css('display','none');
+	});
 }

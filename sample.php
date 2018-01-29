@@ -21,6 +21,7 @@ $arr2=json_decode($resp2);
     <link rel="stylesheet" href="css/comic.css">
 </head>
 <body>
+    <!-- 字幕 -->
     <div id="footer">
         <div class="notice" id="notice0">无问西东，自由时空……</div>
         <div class="notice" id="notice1">想要知道戊戌狗年运程如何？</div>
@@ -36,20 +37,63 @@ $arr2=json_decode($resp2);
             <img src="images/flower.png" alt="*" id="f6">
         </div> -->
     </div>
+    <!-- 字幕 -->
+
+    <!-- 签 -->
     <div id="label-container">
-        <img src="images/label-1.png" alt="" id="label">
+        <img src="" alt="" id="label">
         <!-- <img src="images/cloud-l.png" alt="" id="cloud1">
         <img src="images/cloud-r.png" alt="" id="cloud2"> -->
         <img src="images/l1.png" alt="" id="l1">
         <img src="images/l2.png" alt="" id="l2">
         <img src="images/l3.png" alt="" id="l3">
+        <img src="images/r1.png" alt="" id="r1">
+        <img src="images/r2.png" alt="" id="r2">
+        <img src="images/r3.png" alt="" id="r3">
     </div>
+    <!-- 签 -->
 
+    <!-- 临时背景图片 -->
+    <img src="images/bg.jpg" alt="" id="bg">
+
+    <!-- 左右滑动提示 -->
+    <img src="images/points.png" alt="" id="points">
+    <img src="images/hand.gif" alt="" id="hand">
+    <!-- 左右滑动提示 -->
+
+    <!-- 背景音乐播放 -->
+    <audio src="sound/bgm.mp3" loop="loop" preload="auto" id="bgm" autoplay></audio>
+    <img src="images/bgm-on.png" alt="" id="bgm-control">
+    <!-- 背景音乐播放 -->
+
+    <!-- 截图与分享功能 -->
+    <div id="photo-container">
+        <img src="images/photo.png" alt="" id="photo">
+    </div>
+    <img src="images/share.png" alt="" id="share">
+    <div id="screenshot-container">
+        <div id="card">
+            <div id="card-content">
+                <div id="card-content-title">戊戌狗年3D幸运签</div>
+                <div id="card-content-qrcode">
+                    <img src="images/qrcode.png" alt="" id="qrcode">
+                    <div id="tips">扫码开启旅程</div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-tips"><p id="tips-text">长按保存图片并分享好友</p></div>
+    </div>
+    <div id="cover">
+        <img src="images/arrow.png" alt="" id="arrow">
+        <p id="cover-text">分享本页会好运加倍!</p>
+    </div>
+    <!-- 截图与分享功能 -->
 
 
 
 
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
     <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script src="js/sample.js"></script>
     <script>
