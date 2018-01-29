@@ -175,6 +175,15 @@ function button() {          //按钮绑定
 				$('#screenshot-container').css('display','block');
 			}
 		});
+
+		// var src = $('#3d').toDataURL("image/png");    //未来方案
+		// $('#card-photo').attr('src',src);
+		// html2canvas($('#card'),{
+		// 	onrendered: function (canvas) {
+		// 		var src2 = canvas.toDataURL("image/png");
+		// 		$('#card-photo').attr('src',src2);
+		// 	}
+		// });
 	});
 
 	$('#close').click(function () {                 //截图分享页关闭按钮

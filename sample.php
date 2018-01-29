@@ -74,6 +74,7 @@ $arr2=json_decode($resp2);
     <div id="screenshot-container">
         <img src="images/close.png" alt="" id="close">
         <div id="card">
+            <!-- <img src="" alt="" id="card-photo"> -->
             <div id="card-content">
                 <div id="card-content-title">戊戌狗年3D幸运签</div>
                 <div id="card-content-qrcode">
