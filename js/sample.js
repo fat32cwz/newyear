@@ -9,9 +9,7 @@ $(document).ready(function(){
 
 	musicControl();       //背景音乐控制按钮
 
-	photo();              //拍照截图功能
-
-	share();              //分享遮罩提示
+	button();              //分享遮罩提示
 
 });
 
@@ -143,8 +141,10 @@ function start() {                   //“开始探索”按钮事件
 
 function scollText() {					//生成随机祝福语
 	var index = parseInt(Math.random()*3)+1;
-	var result = 'images/label-'+ index +'.png';
-	$('#label').attr('src',result);
+	var src = 'images/label-'+ index +'.png';
+	$('#label').attr('src',src);
+	var text = ['颜值正义','瘦出腹肌','佛系安宁'];
+	var result = text[index];
 	return result;
 }
 
@@ -162,27 +162,36 @@ function musicControl() {				//背景音乐控制
 	});
 }
 
-function photo() {						//拍照分享
-	$('#photo').click(function () {
+
+function button() {          //按钮绑定
+	$('#photo').click(function () {                 //拍照分享
 		//截屏动画效果？？？？
 		html2canvas($('body'),{
 			onrendered: function (canvas) {
+				if ($('#card canvas').length>0) {
+					$('#card canvas').remove();
+				}
 				$('#card').prepend(canvas);
 				$('#screenshot-container').css('display','block');
 			}
 		});
 	});
-}
 
-function share() {                   	//普通分享
-	$('#share').click(function () {
+	$('#close').click(function () {                 //截图分享页关闭按钮
+		$('#screenshot-container').css('display','none');
+	});
+
+	$('#share').click(function () {                 //直接分享遮罩提示
 		$('#cover').css('display','block');
-		setTimeout(function () {
+
+		setTimeout(function () {                    //自动关闭遮罩
 			$('#cover').css('display','none');
 		},3000)
+
 	});
 
-	$('#cover').click(function () {
+	$('#cover').click(function () {                 //可手动关闭遮罩
 		$(this).css('display','none');
 	});
+
 }

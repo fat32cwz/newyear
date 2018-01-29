@@ -241,6 +241,14 @@
 	height: 100%;
 }
 
+#close{
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	width: 2rem;
+	height: 2rem;
+}
+
 #card{
 	width: 70%;
 	margin: auto;
@@ -361,5 +369,6 @@
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 80%;
+	width: 60%;
 }
+

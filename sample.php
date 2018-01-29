@@ -72,6 +72,7 @@ $arr2=json_decode($resp2);
     </div>
     <img src="images/share.png" alt="" id="share">
     <div id="screenshot-container">
+        <img src="images/close.png" alt="" id="close">
         <div id="card">
             <div id="card-content">
                 <div id="card-content-title">戊戌狗年3D幸运签</div>
@@ -98,6 +99,7 @@ $arr2=json_decode($resp2);
     <script src="js/sample.js"></script>
     <script>
         var result = scollText();     //随机生成的祝福语
+        console.log(result);
         wx.config({
             debug: false,
             appId: '<?php echo $signPackage["appId"];?>',
