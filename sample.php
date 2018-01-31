@@ -99,8 +99,10 @@ $arr2=json_decode($resp2);
     <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script src="js/sample.js"></script>
     <script>
-        var result = scollText();     //随机生成的祝福语
-        console.log(result);
+        var bless = scollText();     //随机生成的祝福语
+        var num = bless.num;
+        var result = bless.result;
+        console.log(num,result);
         wx.config({
             debug: false,
             appId: '<?php echo $signPackage["appId"];?>',
@@ -119,7 +121,7 @@ $arr2=json_decode($resp2);
                 //desc: '寻找散落在世界的4朵桃花,开启新年的幸运密匙！', // 分享描述
                 desc: '新年抽签年年玩？我们不一样！', // 分享描述
                 link: 'https://html5test.goqo.com.cn/brige.php', // 分享链接
-                imgUrl: 'https://html5test.goqo.com.cn/3dObject.png', // 分享图标
+                imgUrl: 'https://html5test.goqo.com.cn/small-'+ num +'.jpg', // 分享图标
                 type: 'link', // 分享类型,music、video或link，不填默认为link
                 dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
                 success: function () {
@@ -133,7 +135,7 @@ $arr2=json_decode($resp2);
             wx.onMenuShareTimeline({           //分享到朋友圈接口
                 title: '抽自己的专属3D彩签，让别人无签可抽。', // 分享标题
                 link: 'https://html5test.goqo.com.cn/brige.php', // 分享链接
-                imgUrl: 'https://html5test.goqo.com.cn/3dObject.png', // 分享图标
+                imgUrl: 'https://html5test.goqo.com.cn/small-'+ num +'.jpg', // 分享图标
                 success: function () {
                     // 用户确认分享后执行的回调函数
                 },

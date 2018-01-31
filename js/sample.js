@@ -3,8 +3,6 @@ $(document).ready(function(){
 
 	tips();               //提示字幕的交替变化
 
-	scollText();		  //生成随机签
-
 	start();              //“开始探索”按钮事件
 
 	musicControl();       //背景音乐控制按钮
@@ -140,12 +138,13 @@ function start() {                   //“开始探索”按钮事件
 
 
 function scollText() {					//生成随机祝福语
-	var index = parseInt(Math.random()*3)+1;
-	var src = 'images/label-'+ index +'.png';
+	var num = roll(12);
+	var index = num-1;
+	var src = 'images/label-'+ num +'.png';
 	$('#label').attr('src',src);
-	var text = ['颜值正义','瘦出腹肌','佛系安宁'];
+	var text = ['颜值正义','老板撒币','好运当头','步步高升','福星高照','新年暴富','财源滚滚','瘦出腹肌','佛系安宁','活出真我','平安喜乐','百吃不胖'];
 	var result = text[index];
-	return result;
+	return {num:num,result:result};
 }
 
 function musicControl() {				//背景音乐控制
@@ -203,4 +202,15 @@ function button() {          //按钮绑定
 		$(this).css('display','none');
 	});
 
+}
+
+
+function roll(n) {                   //N个数中随机生成一个
+	rdm = Math.random();
+	for (var i = 1; i < n; i++) {
+		if (rdm < i/n) {
+			return i;
+		}
+	}
+	return n;
 }
