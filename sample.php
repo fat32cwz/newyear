@@ -27,7 +27,8 @@ $arr2=json_decode($resp2);
         <div class="notice" id="notice1">想要知道戊戌狗年运程如何？</div>
         <div class="notice" id="notice2">只要收集齐散落世界的4朵幸运花，</div>
         <div class="notice" id="notice3">就能开启新年的幸运密语！</div>
-        <button id="start">开始探索</button>
+        <!-- <button id="start">开始探索</button> -->
+        <img src="images/start.png" alt="" id="start">
         <!-- <div id="flower-container">
             <img src="images/flower.png" alt="*" id="f1">
             <img src="images/flower.png" alt="*" id="f2">
@@ -76,7 +77,7 @@ $arr2=json_decode($resp2);
         <div id="card">
             <!-- <img src="" alt="" id="card-photo"> -->
             <div id="card-content">
-                <div id="card-content-title">戊戌狗年3D幸运签</div>
+                <img id="card-content-title" src="images/title3.png" alt="">
                 <div id="card-content-qrcode">
                     <img src="images/qrcode.png" alt="" id="qrcode">
                     <div id="tips">扫码开启旅程</div>
@@ -121,7 +122,7 @@ $arr2=json_decode($resp2);
                 //desc: '寻找散落在世界的4朵桃花,开启新年的幸运密匙！', // 分享描述
                 desc: '新年抽签年年玩？我们不一样！', // 分享描述
                 link: 'https://html5test.goqo.com.cn/brige.php', // 分享链接
-                imgUrl: 'https://html5test.goqo.com.cn/small-'+ num +'.jpg', // 分享图标
+                imgUrl: 'https://html5test.goqo.com.cn/default.jpg', // 分享图标
                 type: 'link', // 分享类型,music、video或link，不填默认为link
                 dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
                 success: function () {
@@ -135,7 +136,7 @@ $arr2=json_decode($resp2);
             wx.onMenuShareTimeline({           //分享到朋友圈接口
                 title: '抽自己的专属3D彩签，让别人无签可抽。', // 分享标题
                 link: 'https://html5test.goqo.com.cn/brige.php', // 分享链接
-                imgUrl: 'https://html5test.goqo.com.cn/small-'+ num +'.jpg', // 分享图标
+                imgUrl: 'https://html5test.goqo.com.cn/default.jpg', // 分享图标
                 success: function () {
                     // 用户确认分享后执行的回调函数
                 },
@@ -151,7 +152,7 @@ $arr2=json_decode($resp2);
                 title: '<?php echo $arr2->nickname;?>'+'的戊戌狗年幸运签：'+ result, // 分享标题
                 desc: '新年抽签年年玩？我们不一样！', // 分享描述
                 link: 'https://html5test.goqo.com.cn/brige.php', // 分享链接
-                imgUrl: 'https://html5test.goqo.com.cn/3dObject.png', // 分享图标
+                imgUrl: 'https://html5test.goqo.com.cn/images/small-'+ num +'.jpg', // 分享图标
                 type: 'link', // 分享类型,music、video或link，不填默认为link
                 dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
                 success: function () {
@@ -165,7 +166,7 @@ $arr2=json_decode($resp2);
             wx.onMenuShareTimeline({           //分享到朋友圈接口
                 title: '<?php echo $arr2->nickname;?>'+'的戊戌狗年幸运签：'+ result, // 分享标题
                 link: 'https://html5test.goqo.com.cn/brige.php', // 分享链接
-                imgUrl: 'https://html5test.goqo.com.cn/3dObject.png', // 分享图标
+                imgUrl: 'https://html5test.goqo.com.cn/images/small-'+ num +'.jpg', // 分享图标
                 success: function () {
                     // 用户确认分享后执行的回调函数
                 },

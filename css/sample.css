@@ -20,13 +20,13 @@
 
 .notice{
 	letter-spacing: 3px;
-	padding: 15px 10px;
+	padding: 20px 10px;
 	color: #010101;
 	font-family: zzgf;
 	font-size: 1.2rem;
 	width: 90%;
 	text-align: center;
-	background-image: url(../images/bg-b.png);
+	background-image: url(../images/bg-b2.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -38,20 +38,22 @@
 }
 
 #start{
-	background-image: url(../images/bg-r.png);
+	/*background-image: url(../images/bg-r.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	color: #010101;
 	font-family: zzgf;
 	font-size: 1.2rem;
-	letter-spacing: 3px;
+	letter-spacing: 3px;*/
 	text-align: center;
 	width: 9rem;
-	height: 4.3rem;
+	/*height: 4.3rem;*/
 	border: 0;
 	box-shadow: none;
 	background-color: rgba(255,255,255,0);
 	outline: none;
+	position: relative;
+	z-index: 999;
 }
 
 #flower-container{
@@ -278,7 +280,7 @@
 	font-family: zzgf;
 	font-size: 1rem;
 	text-align: center;
-	background-image: url(../images/title2.png);
+	background-image: url(../images/title3.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	display: inline-block;
@@ -286,6 +288,11 @@
 	vertical-align: top;
 	height: 100%;
 	line-height: 3.6rem;
+
+	transform-origin: left center;
+	-webkit-transform-origin: left center;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
 }
 
 
@@ -359,7 +366,7 @@
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 80%;
+	width: 70%;
 }
 
 #hand{
