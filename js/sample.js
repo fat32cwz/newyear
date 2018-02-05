@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 	musicControl();       //背景音乐控制按钮
 
-	button();              //分享遮罩提示
+	button();              //下方按钮控制
 
 });
 
@@ -133,6 +133,8 @@ function start() {                   //“开始探索”按钮事件
 			},2000);
 		},1000);
 		$('body').trigger('labelOpen');
+		$('#points').css('display','block');
+		$('#hand').css('display','block');
 	});
 }
 

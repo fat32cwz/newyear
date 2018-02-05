@@ -15,16 +15,16 @@
 	width: 100%;
 	text-align: center;
 	position: fixed;
-	bottom: 3rem;
+	bottom: 8rem;
 }
 
 .notice{
 	letter-spacing: 3px;
-	padding: 20px 10px;
+	padding: 23px 10px;
 	color: #010101;
 	font-family: zzgf;
 	font-size: 1.2rem;
-	width: 90%;
+	width: 75%;
 	text-align: center;
 	background-image: url(../images/bg-b2.png);
 	background-size: 100% 100%;
@@ -35,6 +35,11 @@
 
 #notice1,#notice2,#notice3,#start{
 	display: none;
+}
+
+#notice2{
+	letter-spacing: 1px;
+	font-size: 1.1rem;
 }
 
 #start{
@@ -367,6 +372,7 @@
 	right: 0;
 	margin: auto;
 	width: 70%;
+	display: none;
 }
 
 #hand{
@@ -377,5 +383,6 @@
 	right: 0;
 	margin: auto;
 	width: 60%;
+	display: none;
 }
 
