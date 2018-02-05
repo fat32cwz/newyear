@@ -19,6 +19,7 @@ $arr2=json_decode($resp2);
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/sample.css">
     <link rel="stylesheet" href="css/comic.css">
+    <link rel="stylesheet" href="css/loading.css">
 </head>
 <body>
     <!-- 字幕 -->
@@ -99,6 +100,10 @@ $arr2=json_decode($resp2);
     <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
     <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
     <script src="js/sample.js"></script>
+    //lhc
+    <script src="js/lhc/Component.js"></script>
+    <script src="js/lhc/getResources.js"></script>
+    <script src="js/lhc/loading.js"></script>
     <script>
         var bless = scollText();     //随机生成的祝福语
         var num = bless.num;
