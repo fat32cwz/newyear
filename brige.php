@@ -14,7 +14,7 @@
 		</style>
 	</head>
 	<body>
-		<p id="title2">载入中,请稍后...</p>
+		<p>载入中,请稍后...</p>
 		<script>
 			window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9e20c6627fd372a7&redirect_uri=https://html5test.goqo.com.cn/sample.php&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect"; 
 		</script>
