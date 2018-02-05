@@ -77,8 +77,6 @@ $(document).ready(function(){
         }
     );
 
-    console.log('version conflict test.');
-
     // //test
     // var resourceList = [];
     // for(var i = 0;i < 9;++i){
