@@ -1,0 +1,39 @@
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #cc3333;
+  background-color: #f3ece4;
+  background-image: url(../images/loading-background.jpg);
+  background-position: center;
+  background-size: cover; }
+  #loading .icon {
+    width: 29%;
+    margin-bottom: 0.7rem; }
+  #loading .hint {
+    color: #cc3333;
+    display: none;
+    width: 40%;
+    margin-bottom: 26%; }
+  #loading .progress {
+    display: none;
+    width: 60%;
+    border: solid #cc3333 2px;
+    margin: 0;
+    height: 0.7rem;
+    border-radius: 0.35rem; }
+    #loading .progress .progress-bar {
+      float: left;
+      height: 100%;
+      background-color: #cc3333;
+      -webkit-transition: width .6s ease;
+      -o-transition: width .6s ease;
+      transition: width .6s ease; }
+
+/*# sourceMappingURL=loading.css.map */
